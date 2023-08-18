@@ -24,4 +24,12 @@ public class Boletim {
         return media >= 7;
     }
 
+    public double getMedia() {
+        return media;
+    }
+
+    public double getNotaTotal() {
+        return notaTotal;
+    }
+
 }
