@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 public class Boletim {
     private double pesoTotal;
     private double notaTotal;
@@ -11,14 +9,19 @@ public class Boletim {
         media = 0;
     }
 
-    public void adicionarNota(double nota, double peso) {
+    public void adicionarNota(double nota, double peso) throws Exception {
+        if (nota < 0 || nota > 10) {
+            throw new Exception("Nota inválida");
+        }
+
         pesoTotal += peso;
         notaTotal += nota * peso;
+
         media = notaTotal / pesoTotal;
     }
 
     public boolean hasPassed() {
-        return media > 7;
+        return media >= 7;
     }
 
 }
