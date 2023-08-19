@@ -32,4 +32,8 @@ public class Boletim {
         return notaTotal;
     }
 
+    public double getPesoTotal() {
+        return pesoTotal;
+    }
+
 }

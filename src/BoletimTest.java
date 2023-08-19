@@ -13,6 +13,28 @@ public class BoletimTest {
     }
 
     @Test
+    public void verificaNotaTotal() throws Exception {
+        Boletim boletim = new Boletim();
+
+        boletim.adicionarNota(10, 2);
+        boletim.adicionarNota(3.5, 1);
+        boletim.adicionarNota(8, 3);
+
+        Assert.assertEquals(boletim.getNotaTotal(), 47.5, 0.01);
+    }
+
+    @Test
+    public void verificaPesoTotal() throws Exception {
+        Boletim boletim = new Boletim();
+
+        boletim.adicionarNota(10, 2);
+        boletim.adicionarNota(3.5, 1);
+        boletim.adicionarNota(8, 3);
+
+        Assert.assertEquals(boletim.getPesoTotal(), 6, 0.01);
+    }
+
+    @Test
     public void verificaMedia() throws Exception {
         Boletim boletim = new Boletim();
 
